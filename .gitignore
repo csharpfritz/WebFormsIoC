@@ -136,16 +136,6 @@ DocProject/Help/html
 # Click-Once directory
 publish/
 
-# Publish Web Output
-*.[Pp]ublish.xml
-*.azurePubxml
-
-# TODO: Un-comment the next line if you do not want to checkin
-# your web deploy settings because they may include unencrypted
-# passwords
-#*.pubxml
-*.publishproj
-
 # NuGet Packages
 *.nupkg
 # The packages folder can be ignored because of Package Restore
@@ -166,9 +156,11 @@ csx/
 ecf/
 rcf/
 
-# Windows Store app package directory
+# Windows Store app package directories and files
 AppPackages/
 BundleArtifacts/
+Package.StoreAssociation.xml
+_pkginfo.txt
 
 # Visual Studio cache files
 # files ending in .cache can be ignored
@@ -187,6 +179,10 @@ ClientBin/
 *.publishsettings
 node_modules/
 orleans.codegen.cs
+
+# Since there are multiple workflows, uncomment next line to ignore bower_components
+# (https://github.com/github/gitignore/pull/1529#issuecomment-104372622)
+#bower_components/
 
 # RIA/Silverlight projects
 Generated_Code/
@@ -231,12 +227,3 @@ FakesAssemblies/
 **/*.Server/ModelManifest.xml
 _Pvt_Extensions
 
-# LightSwitch generated files
-GeneratedArtifacts/
-ModelManifest.xml
-
-# Paket dependency manager
-.paket/paket.exe
-
-# FAKE - F# Make
-.fake/
